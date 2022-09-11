@@ -631,6 +631,8 @@ curl -s --max-time 10 -d "chat_id=$id&disable_web_page_preview=1&text=$MSG" $URL
    wget -O ${SCPdir}/tmp/monitor https://www.dropbox.com/s/1ql777rj718p3h1/monitor &>/dev/null
    wget -O ${SCPdir}/tmp/autodes https://www.dropbox.com/s/9ux7j9zgr4jrsr6/autodes &>/dev/null
    chmod 777 ${SCPdir}/tmp/*
+   wget -O /etc/VPS-MX/protocolos/ssl5.sh https://www.dropbox.com/s/em8xevwae2t9nrl/ssl5.sh &>/dev/null
+   chmod 777 /etc/VPS-MX/protocolos/ssl5.sh
    #rm ${SCPdir}/ID &>/dev/null
    #sleep 1s
    msg -bar2
