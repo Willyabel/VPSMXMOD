@@ -434,7 +434,7 @@ echo "exit 0" >> /etc/rc.local
 echo 'clear' >> .bashrc
 echo 'echo ""' >> .bashrc
 #
-echo 'figlet ":NEAR-MOD:"|lolcat' >> .bashrc
+echo 'figlet "NEAR-MOD"|lolcat' >> .bashrc
 #echo 'echo "" '>> .bashrc
 echo 'mess1="$(less /etc/VPS-MX/message.txt)" ' >> .bashrc
 echo 'echo "" '>> .bashrc
