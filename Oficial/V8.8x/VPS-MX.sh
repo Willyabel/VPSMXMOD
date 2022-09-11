@@ -99,7 +99,7 @@ echo ""
 apt install pv -y &> /dev/null
 apt install pv -y -qq --silent > /dev/null 2>&1
 os_system
-echo -e "\e[1;31m	SISTEMA: \e[33m$distro $vercion"
+echo -e "\e[1;31m	🖥SISTEMA: \e[33m$distro $vercion"
 killall apt apt-get > /dev/null 2>&1 && echo -e "\033[97m    ◽️ INTENTANDO DETENER UPDATER SECUNDARIO " | pv -qL 40
 dpkg --configure -a > /dev/null 2>&1 && echo -e "\033[97m    ◽️ INTENTANDO RECONFIGURAR UPDATER " | pv -qL 40
 apt list --upgradable &>/dev/null && echo -e "\033[97m    ◽️ INSTALANDO APT-LIST " | pv -qL 50
@@ -441,7 +441,7 @@ echo 'echo "" '>> .bashrc
 echo 'echo -e "\t\033[92mRESELLER : $mess1 "'>> .bashrc
 echo 'echo -e "\t\e[1;33mVERSION: \e[1;31m$(cat /etc/versin_script_new)"'>> .bashrc
 echo 'echo "" '>> .bashrc                                               
-echo 'echo -e "\t\033[97mPARA MOSTAR PANEL ESCRIBA: menu "'>> .bashrc
+echo 'echo -e "\t\033[97mPARA MOSTAR PANEL ESCRIBA: menu o MENU "'>> .bashrc
 
 echo 'echo ""'>> .bashrc
 #echo -e "       COMANDO PRINCIPAL PARA ENTRAR AL PANEL "
@@ -640,7 +640,7 @@ curl -s --max-time 10 -d "chat_id=$id&disable_web_page_preview=1&text=$MSG" $URL
    mv -f /etc/bash.bashrc.2 /etc/bash.bashrc
    
    echo "${SCPdir}/menu" > /usr/bin/menu && chmod +x /usr/bin/menu
-   echo "${SCPdir}/menu" > /usr/bin/VPSMX && chmod +x /usr/bin/VPSMX
+   echo "${SCPdir}/menu" > /usr/bin/MENU && chmod +x /usr/bin/MENU
    echo "$Key" > ${SCPdir}/key.txt
    [[ -d ${SCPinstal} ]] && rm -rf ${SCPinstal}   
    [[ ${#id} -gt 2 ]] && echo "es" > ${SCPidioma} || echo "${id}" > ${SCPidioma}
@@ -655,7 +655,7 @@ curl -s --max-time 10 -d "chat_id=$id&disable_web_page_preview=1&text=$MSG" $URL
    REBOOT=1
 REBOOT_TIMEOUT=10
 if [ "$REBOOT" = "1" ]; then
-echo -e "	    \e[1;97m\e[1;100mREINICIANDO VPS EN 10 SEGUNDOS\e[0m"
+echo -e "	   \e[1;97m\e[1;100mREINICIANDO VPS EN 10 SEGUNDOS\e[0m"
 while [ $REBOOT_TIMEOUT -gt 0 ]; do
 print_center -ne "-$REBOOT_TIMEOUT-\r"
 sleep 1
